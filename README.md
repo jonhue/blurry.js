@@ -32,7 +32,7 @@ Blurry.js is simple to use:
 
 ```javascript
 window.onload = function() {
-    blurry();
+    blurry({ blur: 120, delay: 1250 });
 };
 ```
 
