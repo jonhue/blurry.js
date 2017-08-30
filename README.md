@@ -1,6 +1,6 @@
 # Blurry.js - Blurred image loading with [StackBlur](https://github.com/flozz/StackBlur)
 
-[![NPM Version](https://img.shields.io/npm/v/blurry.svg)][pkg-npm]
+[NPM Version](https://img.shields.io/npm/v/blurry.svg)
 <img src="https://travis-ci.org/slooob/blurry.js.svg?branch=master" />
 
 ---
