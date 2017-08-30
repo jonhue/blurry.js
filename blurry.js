@@ -44,7 +44,7 @@ function blurry(options) {
                 if ( arguments[i].hasOwnProperty(key) )
                     arguments[0][key] = arguments[i][key];
         return arguments[0];
-    }
+    };
 
     var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol ? 'symbol' : typeof obj; };
 
