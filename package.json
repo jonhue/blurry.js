@@ -1,0 +1,16 @@
+{
+  "name": "blurry",
+  "version": "1.0.0",
+  "description": "Blurry image loading with StackBlur",
+  "main": "blurry.js",
+  "bugs": {
+    "url": "https://github.com/slooob/blurry.js/issues",
+    "email": "developer@slooob.com"
+  },
+  "repository": "https://github.com/slooob/blurry.js",
+  "author": "slooob <developer@slooob.com>",
+  "license": "MIT",
+  "dependencies": {
+    "stackblur-canvas": "^1.4.0"
+  }
+}
