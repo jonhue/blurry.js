@@ -20,6 +20,8 @@
 
 ## Information
 
+Blurry.js makes blurred image loading a breathe. With very little markup, Blurry.js allows you to level up the game of your image loading functionality, by making it look & perform great.
+
 **Size:** Blurry.js takes < 1kb gzipped.
 
 **Dependencies:** [StackBlur](https://github.com/flozz/StackBlur)
@@ -51,7 +53,7 @@ window.onload = function() {
 
 You have some configuration options:
 
-* `blur`: Blur radius as defined by [StackBlur](https://github.com/flozz/StackBlur). Accepts an a float value. Defaults to `100`. To find a value you like check out the [StackBlur demo](http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html).
+* `blur`: Blur radius as defined by [StackBlur](https://github.com/flozz/StackBlur). Accepts a float value. Defaults to `100`. To find a value you like check out the [StackBlur demo](http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html).
 * `delay`: Milliseconds to wait before removing the blur effect. Accepts an integer. Defaults to `1000`.
 
 ---
