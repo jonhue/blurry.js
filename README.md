@@ -3,6 +3,8 @@
 ![NPM Version](https://img.shields.io/npm/v/blurry.svg)
 <img src="https://travis-ci.org/slooob/blurry.js.svg?branch=master" />
 
+Blurry.js makes blurred image loading a breathe. With very little markup, Blurry.js allows you to level up the game of your image loading functionality, by making it look & perform great.
+
 ---
 
 ## Table of Contents
@@ -19,8 +21,6 @@
 ---
 
 ## Information
-
-Blurry.js makes blurred image loading a breathe. With very little markup, Blurry.js allows you to level up the game of your image loading functionality, by making it look & perform great.
 
 **Size:** Blurry.js takes < 1kb gzipped.
 
