@@ -86,8 +86,7 @@ function blurry(options) {
         }
 
     };
-
-    // Set a timeout so we make sure StackBlur is defined
-    setTimeout(main, 0);
+    
+    main();
 
 };
