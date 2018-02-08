@@ -3,6 +3,8 @@
 ![NPM Version](https://img.shields.io/npm/v/blurry.svg)
 <img src="https://travis-ci.org/jonhue/blurry.js.svg?branch=master" />
 
+Blurry.js makes blurred image loading a breathe. With very little markup, Blurry.js allows you to level up the game of your image loading functionality, by making it look & perform great.
+
 ---
 
 ## Table of Contents
@@ -32,7 +34,7 @@ Blurry.js is simple to use:
 
 ```javascript
 import * as blurry from 'blurry.js';
-window.onload = () => blurry.init();
+window.onload = () => blurry.init({ blur: 120, delay: 1250 });
 ```
 
 ```sass
@@ -54,7 +56,7 @@ window.onload = () => blurry.init();
 
 You have some configuration options:
 
-* `blur`: Blur radius as defined by [StackBlur](https://github.com/flozz/StackBlur). Accepts an a float value. Defaults to `100`. To find a value you like check out the [StackBlur demo](http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html).
+* `blur`: Blur radius as defined by [StackBlur](https://github.com/flozz/StackBlur). Accepts a float value. Defaults to `100`. To find a value you like check out the [StackBlur demo](http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html).
 * `delay`: Milliseconds to wait before removing the blur effect. Accepts an integer. Defaults to `1000`.
 
 ---

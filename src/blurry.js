@@ -44,48 +44,46 @@ export function init(options) {
         return arguments[0];
     };
 
-    let _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === 'function' && obj.constructor === Symbol ? 'symbol' : typeof obj; };
-
-    // Main funtionality
-    function main() {
-
-        // Variable definitions
-        let blurRadius = options['blur'],
-            initialDelay = options['delay'],
-            component = document.querySelector('blurry-media--wrapper'),
-            image = document.querySelector('blurry-media--image'),
-            canvas = document.querySelector('blurry-media--canvas'),
-            thumbnail = document.querySelector('blurry-media--thumbnail'),
-            context = canvas.getContext('2d');
-
-        // Setting aspect-ratio-fill padding
-        let aspectRatioFill = document.querySelector('.aspect-ratio-fill');
-        let percentage = thumbnail.naturalHeight / thumbnail.naturalWidth * 100;
-        aspectRatioFill.style.paddingBottom = percentage + '%';
-
-        // Draw the thumbnail onto the canvas, then blur it
-        drawThumbnail(blurRadius);
-
-        // Load the image in. Once it's loaded, add a class to the component wrapper that fades in the image and fades out the canvas element.
-        image.src = image.dataset.src;
-        image.addEventListener( 'load', function onImageLoaded() {
-            image.removeEventListener( 'load', onImageLoaded );
-
-            // This delay is only set so the we can see the blur effect more clearly on page load
-            setTimeout(function () {
-                component.classList.add('blurry-media--loaded');
-            }, initialDelay);
-        });
-
-        // Draws the thumbnail into the canvas and blurs it
-        function drawThumbnail(blur) {
-            context.drawImage(thumbnail, 0, 0, thumbnail.naturalWidth, thumbnail.naturalHeight, 0, 0, canvas.width, canvas.height);
-            StackBlur.canvasRGBA(canvas, 0, 0, canvas.width, canvas.height, blur);
-        }
-
+    if ( typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ) {
+        let _typeof = (obj) => return typeof obj;
+    } else {
+        if ( obj && typeof Symbol === 'function' && obj.constructor === Symbol ) {
+            let _typeof = (obj) => return 'symbol';
+        } else {
+            let _typeof = (obj) => return typeof obj;
+        };
     };
 
-    // Set a timeout so we make sure StackBlur is defined
-    setTimeout( main, 0 );
+    // Variable definitions
+    let blurRadius = options['blur'],
+        initialDelay = options['delay'],
+        component = document.querySelector('.blurry-media--wrapper'),
+        image = document.querySelector('.blurry-media--image'),
+        canvas = document.querySelector('.blurry-media--canvas'),
+        thumbnail = document.querySelector('.blurry-media--thumbnail'),
+        context = canvas.getContext('2d');
+
+    // Setting aspect-ratio-fill padding
+    let aspectRatioFill = document.querySelector('.aspect-ratio-fill');
+    let percentage = thumbnail.naturalHeight / thumbnail.naturalWidth * 100;
+    aspectRatioFill.style.paddingBottom = percentage + '%';
+
+    // Draw the thumbnail onto the canvas, then blur it
+    drawThumbnail(blurRadius);
+
+    // Load the image in. Once it's loaded, add a class to the component wrapper that fades in the image and fades out the canvas element.
+    image.src = image.dataset.src;
+    image.addEventListener( 'load', function onImageLoaded() {
+        image.removeEventListener( 'load', onImageLoaded );
+
+        // This delay is only set so the we can see the blur effect more clearly on page load
+        setTimeout( () => component.classList.add('blurry-media--loaded'), initialDelay );
+    });
+
+    // Draws the thumbnail into the canvas and blurs it
+    function drawThumbnail(blur) {
+        context.drawImage( thumbnail, 0, 0, thumbnail.naturalWidth, thumbnail.naturalHeight, 0, 0, canvas.width, canvas.height );
+        StackBlur.canvasRGBA( canvas, 0, 0, canvas.width, canvas.height, blur );
+    };
 
 };
