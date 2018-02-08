@@ -1,7 +1,7 @@
 # Blurry.js - Blurred image loading with [StackBlur](https://github.com/flozz/StackBlur)
 
 ![NPM Version](https://img.shields.io/npm/v/blurry.svg)
-<img src="https://travis-ci.org/slooob/blurry.js.svg?branch=master" />
+<img src="https://travis-ci.org/jonhue/blurry.js.svg?branch=master" />
 
 ---
 
@@ -31,9 +31,12 @@
 Blurry.js is simple to use:
 
 ```javascript
-window.onload = function() {
-    blurry();
-};
+import * as blurry from 'blurry.js';
+window.onload = () => blurry.init();
+```
+
+```sass
+@import "blurry.js/src/blurry"
 ```
 
 ```html
@@ -58,7 +61,9 @@ You have some configuration options:
 
 ## To Do
 
-* Leave your suggestions [here](https://github.com/slooob/blurry.js/issues/new)
+[Here](https://github.com/jonhue/blurry.js/projects/1) is the full list of current projects.
+
+To propose your ideas, initiate the discussion by adding a [new issue](https://github.com/jonhue/blurry.js/issues/new).
 
 ---
 
@@ -66,13 +71,13 @@ You have some configuration options:
 
 We hope that you will consider contributing to Blurry.js. Please read this short overview for some information about how to get started:
 
-[Learn more about contributing to this repository](https://github.com/slooob/blurry.js/blob/master/CONTRIBUTING.md), [Code of Conduct](https://github.com/slooob/blurry.js/blob/master/CODE_OF_CONDUCT.md)
+[Learn more about contributing to this repository](CONTRIBUTING.md), [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ### Contributors
 
 Give the people some :heart: who are working on this project. See them all at:
 
-https://github.com/slooob/blurry.js/graphs/contributors
+https://github.com/jonhue/blurry.js/graphs/contributors
 
 ### Semantic Versioning
 
@@ -82,7 +87,7 @@ Blurry.js follows Semantic Versioning 2.0 as defined at http://semver.org.
 
 MIT License
 
-Copyright (c) 2017 Slooob
+Copyright (c) 2017 Jonas Hübotter
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
