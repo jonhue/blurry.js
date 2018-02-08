@@ -33,12 +33,12 @@ Blurry.js makes blurred image loading a breathe. With very little markup, Blurry
 Blurry.js is simple to use:
 
 ```javascript
-import * as blurry from 'blurry.js';
+import * as blurry from 'blurry';
 window.onload = () => blurry.init({ blur: 120, delay: 1250 });
 ```
 
 ```sass
-@import "blurry.js/src/blurry"
+@import "blurry/src/blurry"
 ```
 
 ```html
