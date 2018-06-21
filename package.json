@@ -11,6 +11,6 @@
   "author": "Jonas Hübotter <me@jonhue.me>",
   "license": "MIT",
   "dependencies": {
-    "stackblur-canvas": "^1.4.0"
+    "stackblur-canvas": "^1.4.1"
   }
 }
